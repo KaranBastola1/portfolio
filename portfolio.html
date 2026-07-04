@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="style.css">
+<title>Kuldip Bastola — Graphic Designer & Video Editor</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+</head>
+<body>
+
+<!-- Custom Cursor -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMobileMenu()">About</a>
+  <a href="#work" onclick="closeMobileMenu()">Work</a>
+  <a href="#services" onclick="closeMobileMenu()">Services</a>
+  <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+</div>
+
+<!-- ─── NAVIGATION ────────────────────────────── -->
+<nav id="nav">
+  <a class="nav-logo" href="#">KB.</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ─── HERO ──────────────────────────────────── -->
+<section id="hero">
+  <canvas id="three-canvas"></canvas>
+  <div class="hero-overlay"></div>
+  <div class="hero-line"></div>
+
+  <!-- Stats on right (desktop) -->
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-num" data-count="5">0</div>
+      <div class="stat-label">Years<br>Experience</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" data-count="100">0</div>
+      <div class="stat-label">Projects<br>Completed</div>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <div class="hero-content">
+    <div class="hero-eyebrow">Graphic Designer & Video Editor</div>
+    <h1 class="hero-title">Kuldip<br><em>Bastola</em></h1>
+    <p class="hero-sub">
+      Crafting compelling visuals and immersive motion — from brand identities
+      to cinematic edits that leave a lasting impression.
+    </p>
+
+    <!-- Skills chips -->
+    <div class="hero-skills">
+      <div class="hero-skill-chip" style="animation-delay:.1s">
+        <!-- After Effects icon -->
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.5 0h-15A4.5 4.5 0 000 4.5v15A4.5 4.5 0 004.5 24h15a4.5 4.5 0 004.5-4.5v-15A4.5 4.5 0 0019.5 0zm-6.3 17.4l-1-2.9H9.8l-1 2.9H7l3.3-9.3h1.6l3.3 9.3zm4.3 0h-1.7V8.1h1.7z"/></svg>
+        After Effects
+      </div>
+      <div class="hero-skill-chip" style="animation-delay:.18s">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.5 0h-15A4.5 4.5 0 000 4.5v15A4.5 4.5 0 004.5 24h15a4.5 4.5 0 004.5-4.5v-15A4.5 4.5 0 0019.5 0zm-5.6 17.4H12v-4.7l-2.4 4.7H8.2l-2.4-4.7v4.7H4V6.6h1.5L9 13.8l3.5-7.2h1.5v10.8h-.6z"/></svg>
+        Premiere Pro
+      </div>
+      <div class="hero-skill-chip" style="animation-delay:.26s">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm.75 18.75h-1.5v-1.5h1.5v1.5zm0-3.75h-1.5V5.25h1.5V15z"/></svg>
+        DaVinci Resolve
+      </div>
+      <div class="hero-skill-chip" style="animation-delay:.34s">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.5 0h-15A4.5 4.5 0 000 4.5v15A4.5 4.5 0 004.5 24h15a4.5 4.5 0 004.5-4.5v-15A4.5 4.5 0 0019.5 0zm-2.25 15.375a5.625 5.625 0 11-11.25 0 5.625 5.625 0 0111.25 0zm-5.625-7.5a1.875 1.875 0 100-3.75 1.875 1.875 0 000 3.75z"/></svg>
+        Photoshop
+      </div>
+      <div class="hero-skill-chip" style="animation-delay:.42s">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.5 0h-15A4.5 4.5 0 000 4.5v15A4.5 4.5 0 004.5 24h15a4.5 4.5 0 004.5-4.5v-15A4.5 4.5 0 0019.5 0zm-2.437 16.594L12 9.375l-5.063 7.219H5.063L12 6.281l6.937 10.313z"/></svg>
+        Illustrator
+      </div>
+      <div class="hero-skill-chip" style="animation-delay:.5s">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M15.332 8.668a3.333 3.333 0 100-6.663 3.333 3.333 0 000 6.663zm-6.666 0a3.333 3.333 0 100-6.663 3.333 3.333 0 000 6.663zm0 6.666a3.333 3.333 0 100-6.663 3.333 3.333 0 000 6.663zm6.666 3.333a3.333 3.333 0 100-6.663 3.333 3.333 0 000 6.663z"/></svg>
+        Figma
+      </div>
+    </div>
+
+    <div class="hero-actions">
+      <a class="hero-cta" href="#work">
+        View My Work
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a class="hero-cta-secondary" href="mailto:bastolakuldeep@gmail.com">bastolakuldeep@gmail.com</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll">Scroll</div>
+</section>
+
+<!-- ─── ABOUT ──────────────────────────────────── -->
+<section id="about">
+  <div class="section-tag reveal">About Me</div>
+  <h2 class="section-title reveal">More Than <em>5 Years</em><br>of Visual Excellence</h2>
+  <div class="about-grid">
+    <div class="about-visual reveal">
+      <div class="about-placeholder">
+        <img src="kuldip bastola.jpg" alt="Kuldip Bastola">
+      </div>
+      <div class="about-badge">
+        <span>100+</span>
+        <span>Projects Done</span>
+      </div>
+    </div>
+    <div class="reveal">
+      <p class="about-body">
+        I'm Kuldip Bastola, a passionate graphic designer and video editor with over 5 years of experience
+        turning ideas into stunning visual stories. Based in Nepal, I specialize in brand identity,
+        social media content, motion graphics, and cinematic video editing.
+      </p>
+      <p class="about-body">
+        From crafting thumbnail,social media posts to producing professional reels and long-form
+        videos, I bring creativity and precision to every project. Every pixel is intentional,
+        every frame meaningful.
+      </p>
+      <div class="skills-list">
+        <span class="skill-tag">After Effects</span>
+        <span class="skill-tag">Premiere Pro</span>
+        <span class="skill-tag">DaVinci Resolve</span>
+        <span class="skill-tag">Photoshop</span>
+        <span class="skill-tag">Illustrator</span>
+        <span class="skill-tag">Figma</span>
+        <span class="skill-tag">Motion Graphics</span>
+        <span class="skill-tag">Color Grading</span>
+         <span class="skill-tag">Digital Marketing</span>
+          <span class="skill-tag">Web Design</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── WORK SECTIONS ─────────────────────────── -->
+<div id="work">
+
+  <!-- 1. Social Media Posts -->
+  <div class="portfolio-section" id="sec-social">
+    <div class="portfolio-header">
+      <div class="section-tag reveal">Portfolio</div>
+      <div class="portfolio-header-row">
+        <h2 class="section-title reveal">Social Media <em>Posts</em></h2>
+        <div class="carousel-controls">
+          <div class="carousel-counter"><span id="s1-cur">01</span> / <span id="s1-tot">06</span></div>
+          <button class="carousel-btn" id="s1-prev" aria-label="Previous">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+          </button>
+          <button class="carousel-btn" id="s1-next" aria-label="Next">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+      <p class="portfolio-desc reveal">Eye-catching designs optimized for engagement across Instagram, Facebook, and more.</p>
+    </div>
+    <div class="carousel-wrap">
+      <div class="carousel-track" id="s1-track">
+        <div class="card-social grad-1"><div class="card-placeholder"><img src="brt kings.jpg"><div class="card-graphic"></div></div><div class="card-label"><span class="card-label-title">Instagram Post</span><span class="card-label-sub">Lifestyle Brand</span></div></div>
+        <div class="card-social grad-2"><div class="card-placeholder"><img src="brt kings.jpg"><div class="card-graphic">></div></div><div class="card-label"><span class="card-label-title">Facebook Ad</span><span class="card-label-sub">Product Launch</span></div></div>
+        <div class="card-social grad-3"><div class="card-placeholder"><img src="brt kings.jpg"><div class="card-graphic"></div></div><div class="card-label"><span class="card-label-title">Story Design</span><span class="card-label-sub">Event Promo</span></div></div>
+        <div class="card-social grad-4"><div class="card-placeholder"><img src="brt kings.jpg"><div class="card-graphic"></div></div><div class="card-label"><span class="card-label-title">Carousel Post</span><span class="card-label-sub">Fashion Brand</span></div></div>
+        <div class="card-social grad-5"><div class="card-placeholder"><img src="brt kings.jpg"><div class="card-graphic"></div></div><div class="card-label"><span class="card-label-title">Quote Card</span><span class="card-label-sub">Motivational</span></div></div>
+        <div class="card-social grad-6"><div class="card-placeholder"><img src="brt kings.jpg"><div class="card-graphic"></div></div><div class="card-label"><span class="card-label-title">Infographic</span><span class="card-label-sub">Business Stats</span></div></div>
+      </div>
+    </div>
+    <div class="carousel-dots" id="s1-dots"></div>
+  </div>
+
+  <!-- 2. Logo & Branding -->
+  <div class="portfolio-section" id="sec-logo">
+    <div class="portfolio-header">
+      <div class="section-tag reveal">Portfolio</div>
+      <div class="portfolio-header-row">
+        <h2 class="section-title reveal">Logo <em>&</em> Branding</h2>
+        <div class="carousel-controls">
+          <div class="carousel-counter"><span id="s2-cur">01</span> / <span id="s2-tot">06</span></div>
+          <button class="carousel-btn" id="s2-prev" aria-label="Previous">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+          </button>
+          <button class="carousel-btn" id="s2-next" aria-label="Next">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+      <p class="portfolio-desc reveal">Distinctive brand identities and logo systems that communicate at a glance.</p>
+    </div>
+    <div class="carousel-wrap">
+      <div class="carousel-track" id="s2-track">
+        <div class="card-logo grad-2"><div class="card-placeholder"><img src="digira store.jpeg"><div class="card-graphic"></span></div></div><div class="card-label"><span class="card-label-title">Logo Design</span><span class="card-label-sub">Tech Startup</span></div></div>
+        <div class="card-logo grad-5"><div class="card-placeholder"><img src="digira store.jpeg"><div class="card-graphic"></span></div></div><div class="card-label"><span class="card-label-title">Brand Identity</span><span class="card-label-sub">Café Chain</span></div></div>
+        <div class="card-logo grad-1"><div class="card-placeholder"><img src="digira store.jpeg"><div class="card-graphic"></span></div></div><div class="card-label"><span class="card-label-title">Wordmark</span><span class="card-label-sub">Law Firm</span></div></div>
+        <div class="card-logo grad-6"><div class="card-placeholder"><img src="digira store.jpeg"><div class="card-graphic"></span></div></div><div class="card-label"><span class="card-label-title">Icon Mark</span><span class="card-label-sub">Fitness App</span></div></div>
+        <div class="card-logo grad-3"><div class="card-placeholder"><img src="digira store.jpeg"><div class="card-graphic"></span></div></div><div class="card-label"><span class="card-label-title">Monogram</span><span class="card-label-sub">Luxury Brand</span></div></div>
+        <div class="card-logo grad-4"><div class="card-placeholder"><img src="digira store.jpeg"><div class="card-graphic"></span></div></div><div class="card-label"><span class="card-label-title">Brand System</span><span class="card-label-sub">NGO</span></div></div>
+      </div>
+    </div>
+    <div class="carousel-dots" id="s2-dots"></div>
+  </div>
+
+  <!-- 3. Thumbnails -->
+  <div class="portfolio-section" id="sec-thumb">
+    <div class="portfolio-header">
+      <div class="section-tag reveal">Portfolio</div>
+      <div class="portfolio-header-row">
+        <h2 class="section-title reveal">YouTube <em>Thumbnails</em></h2>
+        <div class="carousel-controls">
+          <div class="carousel-counter"><span id="s3-cur">01</span> / <span id="s3-tot">06</span></div>
+          <button class="carousel-btn" id="s3-prev" aria-label="Previous">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+          </button>
+          <button class="carousel-btn" id="s3-next" aria-label="Next">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+      <p class="portfolio-desc reveal">Click-worthy thumbnails engineered to maximize views and channel growth.</p>
+    </div>
+    <div class="carousel-wrap">
+      <div class="carousel-track" id="s3-track">
+        <div class="card-thumb grad-4"><div class="card-placeholder"><img src="last raute.jpg"><div class="card-graphic"></div></div><div class="card-label"><span class="card-label-title">Gaming Channel</span><span class="card-label-sub">Action Series</span></div></div>
+        <div class="card-thumb grad-1"><div class="card-placeholder"><img src="economic history of nepal.jpg"><div class="card-graphic"></div></div><div class="card-label"><span class="card-label-title">Finance Channel</span><span class="card-label-sub">Investment Guide</span></div></div>
+        <div class="card-thumb grad-3"><div class="card-placeholder"><img src="bed prakash joshi.jpg"><div class="card-graphic"></div></div><div class="card-label"><span class="card-label-title">Cooking Channel</span><span class="card-label-sub">Recipe Video</span></div></div>
+        <div class="card-thumb grad-5"><div class="card-placeholder"><img src="last raute.jpg"><div class="card-graphic"></div></div><div class="card-label"><span class="card-label-title">Vlog</span><span class="card-label-sub">Travel Series</span></div></div>
+        <div class="card-thumb grad-2"><div class="card-placeholder"><img src="last raute.jpg"><div class="card-graphic"></div></div><div class="card-label"><span class="card-label-title">Tech Review</span><span class="card-label-sub">Gadget Unboxing</span></div></div>
+        <div class="card-thumb grad-6"><div class="card-placeholder"><img src="last raute.jpg"><div class="card-graphic"></div></div><div class="card-label"><span class="card-label-title">Podcast</span><span class="card-label-sub">Interview Series</span></div></div>
+      </div>
+    </div>
+    <div class="carousel-dots" id="s3-dots"></div>
+  </div>
+
+  <!-- 4. Videos -->
+  <div class="portfolio-section" id="sec-video">
+    <div class="portfolio-header">
+      <div class="section-tag reveal">Portfolio</div>
+      <div class="portfolio-header-row">
+        <h2 class="section-title reveal">Video <em>Edits</em></h2>
+        <div class="carousel-controls">
+          <div class="carousel-counter"><span id="s4-cur">01</span> / <span id="s4-tot">05</span></div>
+          <button class="carousel-btn" id="s4-prev" aria-label="Previous">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+          </button>
+          <button class="carousel-btn" id="s4-next" aria-label="Next">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+      <p class="portfolio-desc reveal">Professional edits with cinematic color grading, transitions, and sound design.</p>
+    </div>
+    <div class="carousel-wrap">
+      <div class="carousel-track" id="s4-track">
+        <div class="card-video grad-3"><div class="play-btn"><div class="play-circle"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div><div class="card-label"><iframe width="560" height="315" src="https://www.youtube.com/embed/0HDjEdaqDEk?si=palwSgq2J-K731Gq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><span class="card-label-title">Brand Film</span><span class="card-label-sub">Corporate Identity</span></div></div>
+        <div class="card-video grad-6"><div class="play-btn"><div class="play-circle"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div><div class="card-label"><span class="card-label-title">Event Coverage</span><span class="card-label-sub">Highlights Reel</span></div></div>
+        <div class="card-video grad-1"><div class="play-btn"><div class="play-circle"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div><div class="card-label"><span class="card-label-title">Product Video</span><span class="card-label-sub">E-commerce</span></div></div>
+        <div class="card-video grad-4"><div class="play-btn"><div class="play-circle"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div><div class="card-label"><span class="card-label-title">Music Video</span><span class="card-label-sub">Artist Promo</span></div></div>
+        <div class="card-video grad-2"><div class="play-btn"><div class="play-circle"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div><div class="card-label"><span class="card-label-title">Testimonial</span><span class="card-label-sub">Client Stories</span></div></div>
+      </div>
+    </div>
+    <div class="carousel-dots" id="s4-dots"></div>
+  </div>
+
+  <!-- 5. Banners -->
+  <div class="portfolio-section" id="sec-banner">
+    <div class="portfolio-header">
+      <div class="section-tag reveal">Portfolio</div>
+      <div class="portfolio-header-row">
+        <h2 class="section-title reveal">Banners <em>&</em> Ads</h2>
+        <div class="carousel-controls">
+          <div class="carousel-counter"><span id="s5-cur">01</span> / <span id="s5-tot">06</span></div>
+          <button class="carousel-btn" id="s5-prev" aria-label="Previous">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+          </button>
+          <button class="carousel-btn" id="s5-next" aria-label="Next">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+      <p class="portfolio-desc reveal">High-impact banners for web, print, and digital advertising campaigns.</p>
+    </div>
+    <div class="carousel-wrap">
+      <div class="carousel-track" id="s5-track">
+        <div class="card-banner grad-5"><div class="card-placeholder"><img src="sak shopper web banner.jpg"><div class="card-graphic" style="width:55%;height:55%"><span class="card-graphic-icon">BN</span></div></div><div class="card-label"><span class="card-label-title">Web Banner</span><span class="card-label-sub">E-commerce Sale</span></div></div>
+        <div class="card-banner grad-2"><div class="card-placeholder"><img src="ss cover fb.jpg"><div class="card-graphic" style="width:55%;height:55%"><span class="card-graphic-icon">BN</span></div></div><div class="card-label"><span class="card-label-title">Billboard</span><span class="card-label-sub">Real Estate</span></div></div>
+        <div class="card-banner grad-6"><div class="card-placeholder"><img src="ss cover fb.jpg"><div class="card-graphic" style="width:55%;height:55%"><span class="card-graphic-icon">BN</span></div></div><div class="card-label"><span class="card-label-title">Email Header</span><span class="card-label-sub">Newsletter</span></div></div>
+        <div class="card-banner grad-1"><div class="card-placeholder"><img src="ss cover fb.jpg"><div class="card-graphic" style="width:55%;height:55%"><span class="card-graphic-icon">BN</span></div></div><div class="card-label"><span class="card-label-title">Social Cover</span><span class="card-label-sub">Facebook Page</span></div></div>
+        <div class="card-banner grad-4"><div class="card-placeholder"><img src="ss cover fb.jpg"><div class="card-graphic" style="width:55%;height:55%"><span class="card-graphic-icon">BN</span></div></div><div class="card-label"><span class="card-label-title">Display Ad</span><span class="card-label-sub">Google Ads</span></div></div>
+        <div class="card-banner grad-3"><div class="card-placeholder"><img src="ss cover fb.jpg"><div class="card-graphic" style="width:55%;height:55%"><span class="card-graphic-icon">BN</span></div></div><div class="card-label"><span class="card-label-title">Event Banner</span><span class="card-label-sub">Flex Print</span></div></div>
+      </div>
+    </div>
+    <div class="carousel-dots" id="s5-dots"></div>
+  </div>
+
+  <!-- 6. Reels -->
+  <div class="portfolio-section" id="sec-reels">
+    <div class="portfolio-header">
+      <div class="section-tag reveal">Portfolio</div>
+      <div class="portfolio-header-row">
+        <h2 class="section-title reveal">Reels <em>&</em> Shorts</h2>
+        <div class="carousel-controls">
+          <div class="carousel-counter"><span id="s6-cur">01</span> / <span id="s6-tot">07</span></div>
+          <button class="carousel-btn" id="s6-prev" aria-label="Previous">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+          </button>
+          <button class="carousel-btn" id="s6-next" aria-label="Next">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+      <p class="portfolio-desc reveal">Scroll-stopping reels and short-form content for Instagram, TikTok, and YouTube Shorts.</p>
+    </div>
+    <div class="carousel-wrap">
+      <div class="carousel-track" id="s6-track">
+        <div class="card-reel grad-1"><div class="play-btn"><div class="play-circle"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div><div class="card-label"><span class="card-label-title">IG Reel</span><span class="card-label-sub">Fashion</span></div></div>
+        <div class="card-reel grad-4"><div class="play-btn"><div class="play-circle"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div><div class="card-label"><span class="card-label-title">TikTok</span><span class="card-label-sub">Food</span></div></div>
+        <div class="card-reel grad-2"><div class="play-btn"><div class="play-circle"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div><div class="card-label"><span class="card-label-title">YT Short</span><span class="card-label-sub">Fitness</span></div></div>
+        <div class="card-reel grad-6"><div class="play-btn"><div class="play-circle"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div><div class="card-label"><span class="card-label-title">IG Reel</span><span class="card-label-sub">Travel</span></div></div>
+        <div class="card-reel grad-3"><div class="play-btn"><div class="play-circle"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div><div class="card-label"><span class="card-label-title">TikTok</span><span class="card-label-sub">Comedy</span></div></div>
+        <div class="card-reel grad-5"><div class="play-btn"><div class="play-circle"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div><div class="card-label"><span class="card-label-title">YT Short</span><span class="card-label-sub">DIY</span></div></div>
+        <div class="card-reel grad-1"><div class="play-btn"><div class="play-circle"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div><div class="card-label"><span class="card-label-title">Promo Reel</span><span class="card-label-sub">Brand</span></div></div>
+      </div>
+    </div>
+    <div class="carousel-dots" id="s6-dots"></div>
+  </div>
+
+</div><!-- end #work -->
+
+<!-- ─── SERVICES ──────────────────────────────── -->
+<section id="services">
+  <div class="section-tag reveal">What I Do</div>
+  <h2 class="section-title reveal">Creative <em>Services</em></h2>
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <div class="service-num">01</div>
+      <div class="service-icon">
+        <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="1"/><path d="M8 21h8M12 17v4"/></svg>
+      </div>
+      <div class="service-name">Video Editing &amp; Post-Production</div>
+      <p class="service-desc">From rough cuts to polished masterpieces — color grading, motion graphics, sound design, and seamless transitions.</p>
+      <div class="service-tools">
+        <span>Premiere Pro</span><span>DaVinci Resolve</span><span>After Effects</span>
+      </div>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-num">02</div>
+      <div class="service-icon">
+        <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+      </div>
+      <div class="service-name">Motion Graphics &amp; Animation</div>
+      <p class="service-desc">Kinetic typography, logo animations, and broadcast-quality motion graphics that bring your brand to life.</p>
+      <div class="service-tools">
+        <span>After Effects</span><span>Premiere Pro</span>
+      </div>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-num">03</div>
+      <div class="service-icon">
+        <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      </div>
+      <div class="service-name">Brand Identity &amp; Logo Design</div>
+      <p class="service-desc">Strategic brand systems — logos, color palettes, typography, and guidelines that resonate with your audience.</p>
+      <div class="service-tools">
+        <span>Illustrator</span><span>Photoshop</span><span>Figma</span>
+      </div>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-num">04</div>
+      <div class="service-icon">
+        <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+      </div>
+      <div class="service-name">Social Media Content</div>
+      <p class="service-desc">Scroll-stopping posts, stories, reels, and carousels that drive engagement and grow your following.</p>
+      <div class="service-tools">
+        <span>Photoshop</span><span>Illustrator</span><span>Premiere Pro</span>
+      </div>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-num">05</div>
+      <div class="service-icon">
+        <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+      </div>
+      <div class="service-name">Thumbnail &amp; Banner Design</div>
+      <p class="service-desc">High-click-rate YouTube thumbnails and compelling banner ads designed for performance and visual impact.</p>
+      <div class="service-tools">
+        <span>Photoshop</span><span>Illustrator</span>
+      </div>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-num">06</div>
+      <div class="service-icon">
+        <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+      </div>
+      <div class="service-name">Reels &amp; Short-Form Video</div>
+      <p class="service-desc">Trend-aware, platform-optimized reels and shorts for Instagram, TikTok, and YouTube Shorts.</p>
+      <div class="service-tools">
+        <span>Premiere Pro</span><span>After Effects</span><span>DaVinci Resolve</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CONTACT ────────────────────────────────── -->
+<section id="contact">
+  <div class="contact-inner">
+    <div class="section-tag reveal" style="justify-content:center;">Get In Touch</div>
+    <h2 class="contact-title reveal">Let's Create<br><em>Together</em></h2>
+    <p class="contact-sub reveal">
+      Have a project in mind? Whether it's a brand film, a logo, or a full social media package —
+      let's talk about how I can help.
+    </p>
+    <a class="contact-email reveal" href="mailto:bastolakuldeep@gmail.com">
+      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      bastolakuldeep@gmail.com
+    </a>
+    <div class="contact-socials reveal">
+      <a class="social-link" href="https://www.instagram.com/karan_bastola/">Instagram</a>
+      <a class="social-link" href="https://www.youtube.com/@Karanbastola">YouTube</a>
+      <a class="social-link" href="https://www.facebook.com/karanbastola07/">Facebook</a>
+      <a class="social-link" href="https://www.linkedin.com/in/karan-bastola-516b02225/">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─────────────────────────────────── -->
+<footer>
+  <a class="footer-logo" href="#">KB.</a>
+  <span class="footer-copy">© 2025 Kuldip Bastola — All rights reserved.</span>
+  <span class="footer-copy">Graphic Designer & Video Editor</span>
+</footer>
+
+<script src="function.js"></script>
+
+</body>
+</html>
